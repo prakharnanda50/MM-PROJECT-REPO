@@ -1,0 +1,4 @@
+experiment_id,architecture,resolution,epochs,batch,optimizer,augmentations,loss_type,val_macro_f1,f1_missing_hole,f1_mouse_bite,f1_open_circuit,f1_short,f1_spur,f1_spurious_copper,training_time_sec,description
+EXP01_Baseline,yolo11n.pt,640,15,8,auto,"lr=0.5,ud=0.0,deg=0.0,mix=0.0,cp=0.0",CE,0.5417,0.6552,0.4615,0.4093,0.6825,0.4672,0.5747,1199.2,Pretrained YOLO11n baseline on leak-free split
+EXP02_Res800,yolo11n.pt,800,15,8,auto,"lr=0.5,ud=0.0,deg=0.0,mix=0.0,cp=0.0",CE,0.5706,0.6654,0.4981,0.4623,0.6833,0.5082,0.6059,1337.0,Higher input resolution 800px on YOLO11n
+EXP03_Augmentations,yolo11n.pt,800,15,8,auto,"lr=0.5,ud=0.5,deg=90.0,mix=0.1,cp=0.1",CE,0.511,0.6316,0.451,0.3843,0.6225,0.4359,0.5409,1430.3,"Flips (H+V), 90-deg rotations, mixup=0.1, copy-paste=0.1 at 800px"

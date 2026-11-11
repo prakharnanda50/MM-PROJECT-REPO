@@ -1,0 +1,7 @@
+path: D:/Model Mahyem
+train: splits/train.txt
+val: splits/val.txt
+test: splits/test.txt
+
+nc: 6
+names: ['missing_hole', 'mouse_bite', 'open_circuit', 'short', 'spur', 'spurious_copper']

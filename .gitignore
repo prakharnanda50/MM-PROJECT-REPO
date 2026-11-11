@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch and YOLO intermediate caches
+*.cache
+runs/
+runs_optuna/
+yolo11*.pt
+
+# Keep final trained model checkpoint for hackathon submission
+!models/
+!models/best.pt
+
+# Large dataset folders (do not commit 2,586 raw images to git)
+data/
+*.zip
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Temporary and local logs
+*.log
+.DS_Store
+Thumbs.db

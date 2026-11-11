@@ -1,0 +1,206 @@
+{
+  "test_macro_f1": 0.5463943958449394,
+  "test_macro_precision": 0.6299673022794193,
+  "test_macro_recall": 0.49447636382169174,
+  "test_plain_accuracy": 0.37839080459770114,
+  "class_metrics": {
+    "0": {
+      "class_name": "missing_hole",
+      "threshold": 0.125,
+      "TP": 164,
+      "FP": 96,
+      "FN": 93,
+      "precision": 0.6307692307692307,
+      "recall": 0.6381322957198443,
+      "f1": 0.6344294003868471
+    },
+    "1": {
+      "class_name": "mouse_bite",
+      "threshold": 0.125,
+      "TP": 141,
+      "FP": 70,
+      "FN": 88,
+      "precision": 0.6682464454976303,
+      "recall": 0.6157205240174672,
+      "f1": 0.640909090909091
+    },
+    "2": {
+      "class_name": "open_circuit",
+      "threshold": 0.15,
+      "TP": 81,
+      "FP": 48,
+      "FN": 207,
+      "precision": 0.627906976744186,
+      "recall": 0.28125,
+      "f1": 0.38848920863309355
+    },
+    "3": {
+      "class_name": "short",
+      "threshold": 0.15,
+      "TP": 152,
+      "FP": 84,
+      "FN": 150,
+      "precision": 0.6440677966101694,
+      "recall": 0.5033112582781457,
+      "f1": 0.5650557620817844
+    },
+    "4": {
+      "class_name": "spur",
+      "threshold": 0.15,
+      "TP": 138,
+      "FP": 86,
+      "FN": 170,
+      "precision": 0.6160714285714286,
+      "recall": 0.44805194805194803,
+      "f1": 0.5187969924812029
+    },
+    "5": {
+      "class_name": "spurious_copper",
+      "threshold": 0.175,
+      "TP": 147,
+      "FP": 101,
+      "FN": 159,
+      "precision": 0.592741935483871,
+      "recall": 0.4803921568627451,
+      "f1": 0.5306859205776173
+    }
+  },
+  "confusion_matrix": [
+    [
+      164,
+      0,
+      0,
+      0,
+      0,
+      0,
+      93
+    ],
+    [
+      0,
+      141,
+      0,
+      0,
+      0,
+      0,
+      88
+    ],
+    [
+      0,
+      0,
+      81,
+      0,
+      0,
+      0,
+      207
+    ],
+    [
+      0,
+      0,
+      0,
+      152,
+      0,
+      0,
+      150
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      138,
+      0,
+      170
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      147,
+      159
+    ],
+    [
+      96,
+      70,
+      48,
+      84,
+      86,
+      101,
+      0
+    ]
+  ],
+  "confusion_matrix_image": "results\\final_test_confusion_matrix.png",
+  "failure_cases": [
+    {
+      "index": 1,
+      "image_name": "01_missing_hole_05_jpg.rf.75cc954c436916f7ed77a56f4840d1b5.jpg",
+      "type": "False Negative (Missed Defect)",
+      "hypothesis": "Missed subtle defect(s): ['missing_hole']. The defect size is small relative to the board layout with low contrast against copper background.",
+      "image_path": "results/failure_cases\\fail_1_01_missing_hole_05_jpg.rf.75cc954c436916f7ed77a56f4840d1b5.jpg"
+    },
+    {
+      "index": 2,
+      "image_name": "01_missing_hole_05_jpg.rf.7d5f9fa8e774943fd6ad8df075c3ff4f.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_2_01_missing_hole_05_jpg.rf.7d5f9fa8e774943fd6ad8df075c3ff4f.jpg"
+    },
+    {
+      "index": 3,
+      "image_name": "01_missing_hole_05_jpg.rf.b7e445c49ecfac18dd73486c314c91cb.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_3_01_missing_hole_05_jpg.rf.b7e445c49ecfac18dd73486c314c91cb.jpg"
+    },
+    {
+      "index": 4,
+      "image_name": "06_missing_hole_05_jpg.rf.1c5f99edbf9b568ece0d4ae6d5ea1a6f.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_4_06_missing_hole_05_jpg.rf.1c5f99edbf9b568ece0d4ae6d5ea1a6f.jpg"
+    },
+    {
+      "index": 5,
+      "image_name": "06_missing_hole_05_jpg.rf.58357d251b6d84c0802b6052cae1f29c.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_5_06_missing_hole_05_jpg.rf.58357d251b6d84c0802b6052cae1f29c.jpg"
+    },
+    {
+      "index": 6,
+      "image_name": "06_missing_hole_05_jpg.rf.e66e12df1956214740909c773399413c.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_6_06_missing_hole_05_jpg.rf.e66e12df1956214740909c773399413c.jpg"
+    },
+    {
+      "index": 7,
+      "image_name": "07_missing_hole_10_jpg.rf.b8cfeab2c3373ecb9da1a562466096a0.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_7_07_missing_hole_10_jpg.rf.b8cfeab2c3373ecb9da1a562466096a0.jpg"
+    },
+    {
+      "index": 8,
+      "image_name": "07_missing_hole_10_jpg.rf.beb45b4f54857199d153a84d5d50cafe.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_8_07_missing_hole_10_jpg.rf.beb45b4f54857199d153a84d5d50cafe.jpg"
+    },
+    {
+      "index": 9,
+      "image_name": "07_missing_hole_10_jpg.rf.97ecaf49c4b60e67aa98d0b2f24eed5f.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_9_07_missing_hole_10_jpg.rf.97ecaf49c4b60e67aa98d0b2f24eed5f.jpg"
+    },
+    {
+      "index": 10,
+      "image_name": "12_missing_hole_02_jpg.rf.01a29cf40160a9193f0dbff5dee6ab44.jpg",
+      "type": "Localization/Misclassification Error",
+      "hypothesis": "Bounding box IoU fell below 0.50 threshold or nearby trace anomaly confused the multi-head detector.",
+      "image_path": "results/failure_cases\\fail_10_12_missing_hole_02_jpg.rf.01a29cf40160a9193f0dbff5dee6ab44.jpg"
+    }
+  ]
+}
